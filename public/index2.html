@@ -30,16 +30,17 @@
 	ul li a {
 		padding: 10px 50px;
 		display: block;
+		color: white;
+
 		/*去除超链接下划线*/
 		text-decoration: none;
-		vertical-align: middle;
 	}
-
 	/* 鼠标移动颜色*/
-	ul li a:hover {
+	.header-nav ul li a:hover,.header-navbar ul li a:hover {
 		background-color: pink;
 	}
-
+	
+		
 	/* 去除圆点*/
 	ul {
 		list-style-type: none;
@@ -70,7 +71,7 @@
 	}
 
 	.clear {
-		clear: both;
+			clear: both;
 	}
 
 	.h-search input[type="text"] {
@@ -140,10 +141,7 @@
 		box-shadow: 1px -1px 5px #32AC9D;
 	}
 	 .shop{
-		/* border: 1px solid red; */
-		float: left;
-		position: relative;
-		left: 50%;
+		overflow: hidden;
 	}
 	.b2{
 		background: #32AC9D;
@@ -151,9 +149,6 @@
 	
 	.sp{
 		float: left;
-		position: relative;
-		right: 50%;
-		/* border: 1px solid #4CCFC1; */
 		margin-right: 5px;
 		margin-top: 10px;
 	}
@@ -182,8 +177,11 @@
 		border: 1px solid #e6e4e8;
 	}
 	.d-shop{
-		width: 100%;
 		margin: 20px 0;
+		display: flex;
+		flex-flow: nowrap wrap;
+		justify-content: space-around;
+		align-items: stretch;
 	}
 	.feat{
 		margin-top:20px;
@@ -192,19 +190,14 @@
 		padding-left: 100px;
 		background: #32AC9D;
 		color: white;
-		widows: 1000px;
 	}
 	.shopping{
-		position: relative;
-		float: left;
-		left: 50%;
-
+		display: flex;
+		flex-flow: nowrap wrap;
+		justify-content: space-around;
+		align-items: stretch;
 	}
 	.shopping>div{
-		position: relative;
-		float: left;
-		right: 50%;
-		margin-right: 100px;
 		margin-top: 50px;
 		border:1px solid wheat;
 		padding: 15px 50px;
@@ -233,8 +226,18 @@
 		color: white;
 		background: #32AC9D;
 		margin: 0;
-		border: 0;
-		
+		border: 0;	
+	}
+	.b-footer{
+		display: flex;
+		flex-flow: nowrap wrap;
+		justify-content: space-around;
+		align-items: stretch;
+		background: #32AC9D;
+		margin-top: 50px;
+	}
+	.footer h3{
+		margin-top: 10px;
 	}
 	
 </style>
@@ -280,7 +283,7 @@
 	<div class="d2">
 		<div class="container">
 			<div id="demo" class="carousel" data-ride="carousel">
-				<!--1.轮播图片-->
+				
 				<div class="carousel-inner">
 					<div class="carousel-item active">
 						<img class="w-100" src="banner1.png" alt="" />
@@ -295,14 +298,14 @@
 						<img class="w-100" src="banner4.png" alt="" />
 					</div>
 				</div>
-				<!--2.左右箭头-->
+			
 				<a data-slide="prev" href="#demo" class="carousel-control-prev">
 					<span class="carousel-control-prev-icon"></span>
 				</a>
 				<a data-slide="next" href="#demo" class="carousel-control-next">
 					<span class="carousel-control-next-icon"></span>
 				</a>
-				<!--3.轮播显示器-->
+				
 				<ul class="carousel-indicators">
 					<li data-slide-to="0" data-target="#demo" class="active"></li>
 					<li data-slide-to="1" data-target="#demo"></li>
@@ -408,7 +411,6 @@
 				</div>
 		</div>
 	</div>
-
 	<div class="shopping">
 			<div>
 				<a href="">
@@ -416,13 +418,24 @@
 					<h3>BRANDED SHOES</h3>
 				</a>
 				<div class="price">
-						<p>￥300.00</p>
-					</div>
-					<div>
-						<button class="btn b1">INDULGE</button>
-					</div>
+					<p>￥300.00</p>
+				</div>
+				<div>
+					<button class="btn b1">INDULGE</button>
+				</div>
 			</div>
-	
+			<div>
+				<a href="">
+					<img src="images/pic1.jpg" alt="">
+					<h3>BRANDED SHOES</h3>
+				</a>
+				<div class="price">
+					<p>￥300.00</p>
+				</div>
+				<div>
+					<button class="btn b1">INDULGE</button>
+				</div>
+			</div>
 			<div>
 				<a href="">
 					<img src="images/pic2.jpg" alt="">
@@ -435,18 +448,7 @@
 						<button class="btn b1">INDULGE</button>
 					</div>
 			</div>
-			<div>
-					<a href="">
-						<img src="images/pic1.jpg" alt="">
-						<h3>BRANDED SHOES</h3>
-					</a>
-					<div class="price">
-							<p>￥300.00</p>
-						</div>
-						<div>
-							<button class="btn b1">INDULGE</button>
-						</div>
-				</div>
+	
 			<div>
 				<a href="">
 					<img src="images/pic3.jpg" alt="">
@@ -460,5 +462,61 @@
 					</div>
 			</div>
 		</div>
+	<div class="clear"></div>
+	<!-- 底部区域 -->
+	<div class="b-footer">
+		<div class="footer">
+			<h3>FEATURED SALE</h3>
+			<ul>
+				<li><a href="">Alexis Hudson</a></li>
+				<li><a href="">Anerucan Apparel</a></li>
+				<li><a href="">Ben Sherman</a></li>
+				<li><a href="">Big Buddha</a></li>
+				<li><a href="">Channel</a></li>
+				<li><a href="">christian Augdiger</a></li>
+				<li><a href="">Coach</a></li>
+				<li><a href="">Cole Haan</a></li>
+			</ul>
+		</div>
+		<div class="footer">
+			<h3>FEATURED SALE</h3>
+			<ul>
+				<li><a href="">Alexis Hudson</a></li>
+				<li><a href="">Anerucan Apparel</a></li>
+				<li><a href="">Ben Sherman</a></li>
+				<li><a href="">Big Buddha</a></li>
+				<li><a href="">Channel</a></li>
+				<li><a href="">christian Augdiger</a></li>
+				<li><a href="">Coach</a></li>
+				<li><a href="">Cole Haan</a></li>
+			</ul>
+			</div>
+		<div class="footer">
+			<h3>FEATURED SALE</h3>
+			<ul>
+				<li><a href="">Alexis Hudson</a></li>
+				<li><a href="">Anerucan Apparel</a></li>
+				<li><a href="">Ben Sherman</a></li>
+				<li><a href="">Big Buddha</a></li>
+				<li><a href="">Channel</a></li>
+				<li><a href="">christian Augdiger</a></li>
+				<li><a href="">Coach</a></li>
+				<li><a href="">Cole Haan</a></li>
+			</ul>
+		</div>
+		<div class="footer">
+			<h3>FEATURED SALE</h3>
+			<ul>
+				<li><a href="">Alexis Hudson</a></li>
+				<li><a href="">Anerucan Apparel</a></li>
+				<li><a href="">Ben Sherman</a></li>
+				<li><a href="">Big Buddha</a></li>
+				<li><a href="">Channel</a></li>
+				<li><a href="">christian Augdiger</a></li>
+				<li><a href="">Coach</a></li>
+				<li><a href="">Cole Haan</a></li>
+				</ul>
+		</div>
+	</div>
 </body>
 </html>
