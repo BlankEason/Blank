@@ -141,7 +141,10 @@
 		box-shadow: 1px -1px 5px #32AC9D;
 	}
 	 .shop{
-		overflow: hidden;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-around;
+		align-items: stretch;
 	}
 	.b2{
 		background: #32AC9D;
@@ -178,10 +181,7 @@
 	}
 	.d-shop{
 		margin: 20px 0;
-		display: flex;
-		flex-flow: nowrap wrap;
-		justify-content: space-around;
-		align-items: stretch;
+	
 	}
 	.feat{
 		margin-top:20px;
@@ -193,7 +193,7 @@
 	}
 	.shopping{
 		display: flex;
-		flex-flow: nowrap wrap;
+		flex-flow: row nowrap;
 		justify-content: space-around;
 		align-items: stretch;
 	}
@@ -255,6 +255,14 @@
 		font-size: 20px;
 		color: white;
 	}
+	img{
+		transition:1s;
+	}
+	img:hover{
+		
+		transform:scale(1.5);
+	}
+
 </style>
 
 <body>
@@ -333,38 +341,38 @@
 
 	<!-- 各商品展示区 -->
 	<div class="d-shop">
-		 <div class="shop"> 
-				<div class="sp">
-					<img src="images/c1.jpg" alt="">
-					<div>
-						<P>BRANDED SHOES</P>
-						<button class="btn b2">SHOP</button>
-					</div>
+		<div class="shop"> 
+			<div class="sp">
+				<img src="images/c1.jpg" alt="">
+				<div>
+					<P>BRANDED SHOES</P>
+					<button class="btn b2">SHOP</button>
 				</div>
+			</div>
 	
-				<div class="sp">
-					<img src="images/c2.jpg" alt="">
-					<div>
-						<P>BRANDED SHOES</P>
-						<button class="btn b2">SHOP</button>
-					</div>
+		    <div class="sp">
+				<img src="images/c2.jpg" alt="">
+				<div>
+					<P>BRANDED SHOES</P>
+					<button class="btn b2">SHOP</button>
 				</div>
+			</div>
 
-				<div class="sp">
-					<img src="images/c3.jpg" alt="">
-					<div>
-						<P>BRANDED SHOES</P>
-						<button class="btn b2">SHOP</button>
-					</div>
+			<div class="sp">
+				<img src="images/c3.jpg" alt="">
+				<div>
+					<P>BRANDED SHOES</P>
+					<button class="btn b2">SHOP</button>
 				</div>
+			</div>
 
-				<div class="sp">
-					<img src="images/c3.jpg" alt="">
-					<div>
-						<P>BRANDED SHOES</P>
-						<button class="btn b2">SHOP</button>
-					</div>
+			<div class="sp">
+				<img src="images/c3.jpg" alt="">
+				<div>
+					<P>BRANDED SHOES</P>
+					<button class="btn b2">SHOP</button>
 				</div>
+			</div>
 		</div> 
 	</div>
 	<!-- featured products -->

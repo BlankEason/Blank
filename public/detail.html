@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    * {
+		margin: 0;
+		padding: 0;
+	}
+
+	.header-nav {
+		background-color: #4CCFC1;
+		width: 100%;
+	}
+
+	.header-nav ul li {
+		float: right;
+		display: inline-block;
+	}
+
+	ul li a {
+		padding: 10px 50px;
+		display: block;
+		color: white;
+
+		/*去除超链接下划线*/
+		text-decoration: none;
+	}
+	/* 鼠标移动颜色*/
+	.header-nav ul li a:hover,.header-navbar ul li a:hover {
+		background-color: pink;
+	}
+	
+		
+	/* 去除圆点*/
+	ul {
+		list-style-type: none;
+	}
+
+	/* header搜索*/
+	.header-search {
+		width: 100%;
+	}
+
+	.h-logo {
+		float: left;
+		width: 20%;
+		text-align: center;
+	}
+
+	.h-search {
+		float: left;
+		width: 60%;
+		text-align: center;
+	}
+
+	.h-icon {
+		float: left;
+		margin-top: 5px;
+		width: 20%;
+		text-align: center;
+	}
+
+	.clear {
+			clear: both;
+	}
+
+	.h-search input[type="text"] {
+		width: 40%;
+		height: 30px;
+		outline: 0;
+		margin: 10px auto;
+		padding: 0 10px;
+	}
+
+	.h-search input[type="submit"] {
+		width: 50px;
+		height: 28px;
+		margin-left: -58px;
+		vertical-align: middle;
+		background: url(images/search_h.png) no-repeat center center;
+		border: 0;
+	}
+
+	/*header-navbar*/
+	.header-navbar {
+		background: #4CCFC1;
+		text-align: center;
+		height: 41px;
+	}
+
+	.header-navbar ul {
+		display: inline-block;
+		overflow: auto;
+	}
+
+	.header-navbar ul li {
+		float: left;
+		display: inline;
+	}
+
+	.header-navbar ul li a {
+		color: white;
+		font-size: 18px;
+		font-weight: bolder;
+	}
+    .b-footer{
+		display: flex;
+		flex-flow: nowrap wrap;
+		justify-content: space-around;
+		align-items: stretch;
+		margin-top: 50px;
+		padding: 20px 200px;
+		background: #40C4B2;
+	}
+	.footer{
+		margin-top: 20px;
+	}
+	.footer h3{
+		color: white;
+	}
+	.footer ul li a{
+		padding: 5px 0;
+		font-size: 18px;	
+	}
+	.copy{
+		background: #2DA89B;
+		text-align: center;
+		padding: 20px 0;
+		font-size: 20px;
+		color: white;
+	}
+    .main{
+        display: flex;
+        width: 100%;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: stretch;
+    }
+    .left{
+        width: 60%;
+        background: red;
+    }
+    .right{
+        width: 20%;
+        background: pink;
+    }
+    .small-pic{
+        width: 94px;height: 440px;
+        /* background: blue; */
+        float: left;
+    }
+    .small-pic ul li {
+        width: 93px;height: 110px;
+    }
+    .big-pic img{
+        width: 370px;height: 440px;
+    }
+    </style>
+</head>
+<body>
+    	<!-- 顶部导航 -->
+	<div class="header-nav">
+		<ul>
+			<li><a href="login.html">登录</a></li>
+			<li><a href="reg.html">注册</a></li>
+			<li><a href="">购物车</a></li>
+			<li><a href="">我的订单</a></li>
+			<li><a href="">关于我们</a></li>
+		</ul>
+		<div class="clear"></div>
+	</div>
+	<!-- 搜索栏 -->
+	<div class="header-search">
+		<div class="h-logo">
+			<img src="logo.png" alt="">
+		</div>
+		<div class="h-search">
+			<input type="text">
+			<input type="submit" value="">
+		</div>
+		<div class="h-icon">
+			<img src="images/cart.png" alt="">
+		</div>
+		<div class="clear"></div>
+	</div>
+	<!-- 导航栏 -->
+	<div class="header-navbar">
+		<ul>
+			<li><a href="#">HOME</a></li>
+			<li><a href="#">NIKE</a></li>
+			<li><a href="#">Adidas</a></li>
+			<li><a href="#">VANS</a></li>
+			<li><a href="#">NEW BALANCE</a></li>
+		</ul>
+		<div class="clear"></div>
+    </div>
+
+    <!-- 主体内容 -->
+    <div class="main">
+        <!-- left -->
+        <div class="left">
+            <!-- 上部分区域 -->
+            <div class="left-top">
+                <!-- 左边图片区域 -->
+                <div class="left-pic">
+                    <div class="small-pic">
+                        <ul >
+                            <li><img src="images/small/0001-2.jpg" alt=""></li>
+                            <li><img src="images/small/0001-1.jpg" alt=""></li>
+                            <li><img src="images/small/0001-4.jpg" alt=""></li>
+                            <li><img src="images/small/0001-3.jpg" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="big-pic">
+                        <img src="images/0001-2.jpg" alt="">
+                    </div>
+                </div>
+                <!-- 右边介绍区域 -->
+                <div class="right-detail">
+                    
+                </div>
+            </div>
+
+
+
+            <!-- 下部分区域 -->
+            <div class="left-bottom">
+                
+            </div>
+        </div>
+        <!-- right -->
+        <div class="right"></div>
+    </div>
+
+
+
+
+
+    <!-- 底部区域 -->
+	<div class="b-footer">
+		<div class="footer">
+			<h3>FEATURED SALE</h3>
+			<ul>
+				<li><a href="">Alexis Hudson</a></li>
+				<li><a href="">Anerucan Apparel</a></li>
+				<li><a href="">Ben Sherman</a></li>
+				<li><a href="">Big Buddha</a></li>
+				<li><a href="">Channel</a></li>
+				<li><a href="">christian Augdiger</a></li>
+				<li><a href="">Coach</a></li>
+				<li><a href="">Cole Haan</a></li>
+			</ul>
+		</div>
+		<div class="footer">
+			<h3>MENS SSTORE</h3>
+			<ul>
+				<li><a href="">Alexis Hudson</a></li>
+				<li><a href="">Anerucan Apparel</a></li>
+				<li><a href="">Ben Sherman</a></li>
+				<li><a href="">Big Buddha</a></li>
+				<li><a href="">Channel</a></li>
+				<li><a href="">christian Augdiger</a></li>
+				<li><a href="">Coach</a></li>
+				<li><a href="">Cole Haan</a></li>
+			</ul>
+			</div>
+		<div class="footer">
+			<h3>WOMEN STORE</h3>
+			<ul>
+				<li><a href="">Alexis Hudson</a></li>
+				<li><a href="">Anerucan Apparel</a></li>
+				<li><a href="">Ben Sherman</a></li>
+				<li><a href="">Big Buddha</a></li>
+				<li><a href="">Channel</a></li>
+				<li><a href="">christian Augdiger</a></li>
+				<li><a href="">Coach</a></li>
+				<li><a href="">Cole Haan</a></li>
+			</ul>
+		</div>
+		<div class="footer">
+			<h3>QUICK LINKS</h3>
+			<ul>
+				<li><a href="">Alexis Hudson</a></li>
+				<li><a href="">Anerucan Apparel</a></li>
+				<li><a href="">Ben Sherman</a></li>
+				<li><a href="">Big Buddha</a></li>
+				<li><a href="">Channel</a></li>
+				<li><a href="">christian Augdiger</a></li>
+				<li><a href="">Coach</a></li>
+				<li><a href="">Cole Haan</a></li>
+				</ul>
+		</div>
+	</div>
+	<!-- 底部copyright -->
+	<div class="copy">
+		Copyright © 2019.Company name All rights reserved.
+	</div>
+</body>
+</html>
