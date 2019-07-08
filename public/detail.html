@@ -4,28 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
     <style>
-    * {
+    *{
 		margin: 0;
 		padding: 0;
 	}
-
 	.header-nav {
 		background-color: #4CCFC1;
 		width: 100%;
 	}
-
 	.header-nav ul li {
 		float: right;
 		display: inline-block;
 	}
-
 	ul li a {
 		padding: 10px 50px;
 		display: block;
 		color: white;
-
 		/*去除超链接下划线*/
 		text-decoration: none;
 	}
@@ -39,35 +39,29 @@
 	ul {
 		list-style-type: none;
 	}
-
 	/* header搜索*/
 	.header-search {
 		width: 100%;
 	}
-
 	.h-logo {
 		float: left;
 		width: 20%;
 		text-align: center;
 	}
-
 	.h-search {
 		float: left;
 		width: 60%;
 		text-align: center;
 	}
-
 	.h-icon {
 		float: left;
 		margin-top: 5px;
 		width: 20%;
 		text-align: center;
 	}
-
 	.clear {
 			clear: both;
 	}
-
 	.h-search input[type="text"] {
 		width: 40%;
 		height: 30px;
@@ -75,7 +69,6 @@
 		margin: 10px auto;
 		padding: 0 10px;
 	}
-
 	.h-search input[type="submit"] {
 		width: 50px;
 		height: 28px;
@@ -84,24 +77,20 @@
 		background: url(images/search_h.png) no-repeat center center;
 		border: 0;
 	}
-
 	/*header-navbar*/
 	.header-navbar {
 		background: #4CCFC1;
 		text-align: center;
 		height: 41px;
 	}
-
 	.header-navbar ul {
 		display: inline-block;
 		overflow: auto;
 	}
-
 	.header-navbar ul li {
 		float: left;
 		display: inline;
 	}
-
 	.header-navbar ul li a {
 		color: white;
 		font-size: 18px;
@@ -133,8 +122,6 @@
 		font-size: 20px;
 		color: white;
 	}
-
-
     .main{
         display: flex;
         flex-flow: row nowrap;
@@ -148,9 +135,10 @@
     .left{
         /* width: 70%; */
 		/* background: red; */
+		border: 2px solid red;
     }
     .right{
-        width: 20%;
+        width: 30%;
         background: pink;
     }
 	.left-top{
@@ -160,36 +148,59 @@
 	}
 	.left-pic{
 		display: flex;
-		flex-flow: row nowrap;
+		flex-flow: row wrap;
 		justify-content: center;
-		/* width: 100%; */
-		background: #d8dce5;
+		/* width:550px; */
+		width: 100%;
+		/* background: #d8dce5; */
 	}
 	.small-pic{
-		/* width: 93px; */
+		width: 71px;
+		height: 450px;
 		display: flex;
 		flex-flow: column nowrap;
-		justify-content: space-around;
+		justify-content: space-between;
+	}
+	.small-pic img{
+		width: 71px;
 	}
     .big-pic img{
-        width: 520px;
+        width: 380px;
+		height: 450px;
 		/* margin-left: 10px; */
     }
 	.right-detail{
-		/* width: 100%;  */
+		width: 70%; 
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: start;
-		background: wheat;
+		/* background: rgb(138, 136, 134); */
 	}
-	.detail{
-		margin:0px 50px;
+	.detail,
+	.select,
+	.share{
+		margin:0px 30px;
 	}
 	.detail h2{
 		font-size: 28px;
-		margin-bottom: 20px;
+		/* margin-bottom: 20px; */
 	}
 	hr{ margin: 20px 0;}
+
+	.share ul,
+	.select ul{
+		display:inline-block;
+		overflow: auto;
+	}
+	.share ul li,
+	.select ul li{
+		float: left;
+		margin: 10px 20px;
+	}
+	.share ul li a{
+		padding: 0 0;
+		background: #40C4B2
+	}
     </style>
 </head>
 <body>
@@ -228,42 +239,42 @@
 			<li><a href="#">NEW BALANCE</a></li>
 		</ul>
 		<div class="clear"></div>
-    </div>
+  </div>
 
     <!-- 主体内容 -->
     <div class="main">
-        <!-- left -->
-        <div class="left">
-            <!-- 上部分区域 -->
-            <div class="left-top">
-                <!-- 左边图片区域 -->
+      <!-- left -->
+   		<div class="left">
+          <!-- 上部分区域 -->
+           <div class="left-top">
+              <!-- 左边图片区域 -->
                 <div class="left-pic">
                     <div class="small-pic">
-                        <div><img src="images/small/0001-2.jpg" alt=""></div>
-                        <div><img src="images/small/0001-1.jpg" alt=""></div>
-                        <div><img src="images/small/0001-4.jpg" alt=""></div>
-                        <div><img src="images/small/0001-3.jpg" alt=""></div>
+                      <div><img src="images/small/0001-2.jpg" alt=""></div>
+                      <div><img src="images/small/0001-1.jpg" alt=""></div>
+                      <div><img src="images/small/0001-4.jpg" alt=""></div>
+                      <div><img src="images/small/0001-3.jpg" alt=""></div>
                     </div>
                     <div class="big-pic">
-                        <img src="images/0001-2.jpg" alt="">
+                      <img src="images/0001-2.jpg" alt="">
                     </div>
-                </div>
+              	</div>
                 <!-- 右边介绍区域 -->
-                <div class="right-detail"> 
+             	<div class="right-detail"> 
 					<div class="detail">
 						<h2>Lorem Ipsum is simply dummy text</h2>
 						<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-						<h5>
+						<h4>
 							Rs. 399
 							<a href="#">Click For Offer</a>
-						</h5>
+						</h4>
 					</div>
 					<hr>
 					<div class="select">
 						<h3>AVAILABLE OPTIONS :</h3>
 						<ul>
-							<li>
-								Color:
+						    <li>
+								Color :
 								<select name="" id="">
 									<option value="">silver</option>
 									<option value="">silver</option>
@@ -272,7 +283,7 @@
 								</select>
 							</li>
 							<li>
-								size:
+								size :
 								<select name="" id="">
 									<option value="">L</option>
 									<option value="">M</option>
@@ -281,7 +292,7 @@
 								</select>
 							</li>
 							<li>
-								size:
+								Quality :
 								<select name="" id="">
 									<option value="">1</option>
 									<option value="">2</option>
@@ -291,9 +302,11 @@
 								</select>
 							</li>
 						</ul>
-						<button>Add To Cart</button>
-						<span><a href="">LOGIN TO SAVE IN WISHLIST</a></span>
-					</div>
+						<div>
+							<button class="btn btn-success ">Add To Cart</button>
+							<span><a href="">LOGIN TO SAVE IN WISHLIST</a></span>
+						</div>
+					</div>						
 					<hr>
 					<div class="share">
 						<h4>SHARE PRODUCT :</h4>
@@ -304,18 +317,16 @@
 							<li><a href=""><img src="images/gpluse.png" alt=""></a></li>
 						</ul>
 					</div>
-				</div>
-            </div>
+			    </div>
+		   </div>
             <!-- 下部分区域 -->
-            <div class="left-bottom">
-                
-            </div>
+           <div class="left-bottom"></div>
 		</div>
-		
 
-        <!-- right -->
-        <div class="right"></div>
+      <!-- right -->
+		<div class="right"></div>
     </div>
+
 
 
 
