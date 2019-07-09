@@ -135,7 +135,7 @@
     .left{
         /* width: 70%; */
 		/* background: red; */
-		border: 2px solid red;
+		/* border: 2px solid red; */
     }
     .right{
         width: 30%;
@@ -179,12 +179,9 @@
 	.detail,
 	.select,
 	.share{
-		margin:0px 30px;
+		margin:0px 25px;
 	}
-	.detail h2{
-		font-size: 28px;
-		/* margin-bottom: 20px; */
-	}
+	
 	hr{ margin: 20px 0;}
 
 	.share ul,
@@ -200,6 +197,43 @@
 	.share ul li a{
 		padding: 0 0;
 		background: #40C4B2
+	}
+	.detail h2{
+		font-size: 28px;
+		font-weight:bolder;
+		text-shadow: 0 1px 0 #ffffff;
+		color: #555555;
+		/* margin-bottom: 20px; */
+	}
+	.detail h4{
+		color: #2DA89B;
+		font-size: 30px;
+	}
+	.detail h4 a{
+		font-size: 20px;
+		color: #555555;
+		margin-left: 10px;
+	}
+	.select h3{
+		color: #777;
+		font-size: 22px;
+	}
+	.select span a{
+		/* margin-left: 20px; */
+		margin-top: 10px;
+		float: right;
+	}
+	.select ul{
+		margin-top: 10px;
+	}
+	.select ul li{ margin: 0;}
+
+	.select ul li select {
+		margin-left: 5px;
+		padding: 4px;
+	}
+	.select ul li select option{
+		/* width: 20px; */
 	}
     </style>
 </head>
@@ -239,11 +273,11 @@
 			<li><a href="#">NEW BALANCE</a></li>
 		</ul>
 		<div class="clear"></div>
-  </div>
+    </div>
 
     <!-- 主体内容 -->
     <div class="main">
-      <!-- left -->
+      	<!-- left -->
    		<div class="left">
           <!-- 上部分区域 -->
            <div class="left-top">
@@ -274,7 +308,7 @@
 						<h3>AVAILABLE OPTIONS :</h3>
 						<ul>
 						    <li>
-								Color :
+								Color:
 								<select name="" id="">
 									<option value="">silver</option>
 									<option value="">silver</option>
@@ -283,7 +317,7 @@
 								</select>
 							</li>
 							<li>
-								size :
+								Size:
 								<select name="" id="">
 									<option value="">L</option>
 									<option value="">M</option>
@@ -292,7 +326,7 @@
 								</select>
 							</li>
 							<li>
-								Quality :
+								Quality:
 								<select name="" id="">
 									<option value="">1</option>
 									<option value="">2</option>
@@ -320,10 +354,9 @@
 			    </div>
 		   </div>
             <!-- 下部分区域 -->
-           <div class="left-bottom"></div>
+            <div class="left-bottom"></div>
 		</div>
-
-      <!-- right -->
+      	<!-- right -->
 		<div class="right"></div>
     </div>
 
