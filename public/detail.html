@@ -20,13 +20,12 @@
 	}
 	.header-nav ul li {
 		float: right;
-		display: inline-block;
+		/* display: inline-block; */
 	}
 	ul li a {
 		padding: 10px 50px;
 		display: block;
 		color: white;
-		/*去除超链接下划线*/
 		text-decoration: none;
 	}
 	/* 鼠标移动颜色*/
@@ -36,7 +35,7 @@
 	
 		
 	/* 去除圆点*/
-	ul {
+	ul{
 		list-style-type: none;
 	}
 	/* header搜索*/
@@ -133,25 +132,27 @@
 		margin-right: 150px; 
     }
     .left{
-        /* width: 70%; */
+        /* width: 100%; */
 		/* background: red; */
 		/* border: 2px solid red; */
     }
     .right{
-        width: 30%;
-        background: pink;
+        /* width: 300px; */
+        /* background: pink; */
+		margin-left: 20px;
     }
 	.left-top{
 		display: flex;
 		flex-flow: row nowrap;
 		justify-content: center;
+		/* width: 1500px; */
 	}
 	.left-pic{
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: center;
 		/* width:550px; */
-		width: 100%;
+		/* width: 100%; */
 		/* background: #d8dce5; */
 	}
 	.small-pic{
@@ -170,7 +171,7 @@
 		/* margin-left: 10px; */
     }
 	.right-detail{
-		width: 70%; 
+		width: 600px; 
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: start;
@@ -180,6 +181,10 @@
 	.select,
 	.share{
 		margin:0px 25px;
+		/* padding-right: 50px; */
+	}
+	.share h4{
+		color: #777;
 	}
 	
 	hr{ margin: 20px 0;}
@@ -210,7 +215,7 @@
 		font-size: 30px;
 	}
 	.detail h4 a{
-		font-size: 20px;
+		font-size: 16px;
 		color: #555555;
 		margin-left: 10px;
 	}
@@ -222,18 +227,75 @@
 		/* margin-left: 20px; */
 		margin-top: 10px;
 		float: right;
+		color: #777;
 	}
 	.select ul{
 		margin-top: 10px;
 	}
-	.select ul li{ margin: 0;}
-
+	.select ul li{ 
+		margin: 0;
+		margin-left: 10px;
+	}
+	.btn{
+		background: #555555;
+	}
 	.select ul li select {
 		margin-left: 5px;
 		padding: 4px;
 	}
 	.select ul li select option{
 		/* width: 20px; */
+	}
+	.container{
+		margin: 0;
+	}
+	.left-bottom{
+		margin-top: 10px;
+	}
+	.tab-content ul{
+		list-style-type: circle;
+		margin-left: 50px;
+	} 
+	.container ul li a{
+		color: #777;
+		font-size: 20px;
+		font-weight: bolder;
+	}
+	.tab-content{
+		border: 1px solid #d2cdcd;
+		border-top: 0;
+		/* width: 1000px; */
+		height: 350px;
+		border-radius: 5px;
+	}
+	.tab-pane p{
+		font-size: 16px;
+		padding: 10px;
+		padding-bottom: 0;
+		margin: 0;
+	}
+	.tab-pane ul li:not(:first-child){
+		margin-top: 5px;
+	}
+	.right ul{
+		margin: 0;
+		background: white;
+	}
+	.right ul li a{
+		padding: 0;
+		color: #555555;
+	}
+	.right ul h2{
+		background: #2DA89B;
+		padding: 10px;
+		padding-left: 20px;
+		margin: 0;
+		text-align:left;
+		color: white;
+	}
+	.right ul li{
+		padding: 10px;
+		border: 1px solid #eae6e6;
 	}
     </style>
 </head>
@@ -274,7 +336,6 @@
 		</ul>
 		<div class="clear"></div>
     </div>
-
     <!-- 主体内容 -->
     <div class="main">
       	<!-- left -->
@@ -295,7 +356,7 @@
               	</div>
                 <!-- 右边介绍区域 -->
              	<div class="right-detail"> 
-					<div class="detail">
+					<div class="detail"> 
 						<h2>Lorem Ipsum is simply dummy text</h2>
 						<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
 						<h4>
@@ -351,15 +412,82 @@
 							<li><a href=""><img src="images/gpluse.png" alt=""></a></li>
 						</ul>
 					</div>
-			    </div>
+				</div>
+				
 		   </div>
             <!-- 下部分区域 -->
-            <div class="left-bottom"></div>
+            <div class="left-bottom">
+				<div class="container">
+					<ul class="nav nav-tabs ">
+						<li class="nav-item">
+							<a data-toggle="tab" href="#tab1" class="nav-link active">OVERVIEW</a>
+						</li>
+						<li class="nav-item">
+							<a data-toggle="tab" href="#tab2" class="nav-link" >CONSUMER ELECTRONICS</a>
+						</li>
+						<li>
+							<a data-toggle="tab" href="#tab3" class="nav-link">SEMICONDUCTOR</a>
+						</li>
+					</ul>
+					<div class="tab-content">
+						<div id="tab1" class="tab-pane active">
+							<p>
+								LOREM IPSUM There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined
+							</p>
+							<ul>
+								<li>Research</li>
+								<li>Design and Development</li>
+								<li>Porting and Optimization</li>
+								<li>System integration</li>
+								<li>Verification, Validation and Testing</li>
+								<li>Maintenance and Support</li>
+							</ul>
+						</div>
+						<div id="tab2" class="tab-pane">
+							<p>
+								WELCOME Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections
+							</p>
+							<ul>
+								<li>Research</li>
+								<li>Design and Development</li>
+								<li>System integration</li>
+								<li>Verification, Validation and Testing</li>
+								<li>Maintenance and Support</li>
+							</ul>
+						</div>
+						<div id="tab3" class="tab-pane">
+							<p>
+								LOREM IPSUM There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined
+							</p>
+							<ul>
+								<li>Design and Development</li>
+								<li>Porting and Optimization</li>
+								<li>System integration</li>
+								<li>Verification, Validation and Testing</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
       	<!-- right -->
-		<div class="right"></div>
+		<div class="right">
+			<ul>
+				<h2>Best Sellers</h2>
+				<li><a href="">Always Free From Repetition</a></li>
+				<li><a href="">Always Free From Repetition</a></li>
+				<li><a href="">The Standard Chunk Of Lorem Ipsum</a></li>
+				<li><a href="">The Standard Chunk Of Lorem Ipsum</a></li>
+				<li><a href="">Always Free From Repetition</a></li>
+				<li><a href="">Always Free From Repetition</a></li>
+				<li><a href="">Always Free From Repetition</a></li>
+				<li><a href="">The Standard Chunk Of Lorem Ipsum</a></li>
+				<li><a href="">Always Free From Repetition</a></li>
+				<li><a href="">Always Free From Repetition</a></li>
+				<li><a href="">Always Free From Repetition</a></li>
+			</ul>
+		</div>
     </div>
-
 
 
 
