@@ -10,56 +10,61 @@
 	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
     <style>
-    *{
+   	* {
 		margin: 0;
 		padding: 0;
 	}
+
 	.header-nav {
 		background-color: #4CCFC1;
 		width: 100%;
+		height: 43.75px;
 	}
-	.header-nav ul li {
-		float: right;
-		/* display: inline-block; */
-	}
-	ul li a {
+
+	ul>li>a {
 		padding: 10px 50px;
 		display: block;
 		color: white;
+
+		/*去除超链接下划线*/
 		text-decoration: none;
 	}
 	/* 鼠标移动颜色*/
-	.header-nav ul li a:hover,.header-navbar ul li a:hover {
+	.header-nav>ul>li>a:hover,.header-navbar ul li a:hover {
 		background-color: pink;
 	}
 	
 		
 	/* 去除圆点*/
-	ul{
+	ul {
 		list-style-type: none;
 	}
+
 	/* header搜索*/
 	.header-search {
-		width: 100%;
+		width: 100%;	
+		height: 50px;
+		/* background: #4CCFC1; */
+		/* position: fixed; */
 	}
+
 	.h-logo {
 		float: left;
 		width: 20%;
 		text-align: center;
 	}
+
 	.h-search {
 		float: left;
 		width: 60%;
 		text-align: center;
 	}
+
 	.h-icon {
 		float: left;
 		margin-top: 5px;
 		width: 20%;
 		text-align: center;
-	}
-	.clear {
-			clear: both;
 	}
 	.h-search input[type="text"] {
 		width: 40%;
@@ -68,34 +73,107 @@
 		margin: 10px auto;
 		padding: 0 10px;
 	}
+
 	.h-search input[type="submit"] {
 		width: 50px;
 		height: 28px;
-		margin-left: -58px;
+		margin-left: -45px;
+		margin-top: -5px;
 		vertical-align: middle;
 		background: url(images/search_h.png) no-repeat center center;
 		border: 0;
+		outline: 0;
 	}
+
+	.clear {
+			clear: both;
+	}
+
+	.header-nav>ul{
+		float: right;
+		display: inline-block;
+		margin: 0;
+	}
+	.header-nav>ul>li{
+		float: left;
+		display: inline;
+		position: relative;
+	}
+	.header-nav>ul>li>a{
+		padding:10px 30px;
+	}
+	.header-nav>ul>li>ul{
+		clear: both;
+		position: absolute;
+		top:44px;
+		opacity:0;
+		transition:all .5s linear;
+	}
+	.header-nav>ul>li:hover>ul{
+		top:44px;
+		opacity:1;
+	}
+	.header-nav>ul>li>ul>li{
+		display:block;
+		background:#4CCFC1;
+		width:124px;
+		color: white;
+		text-align: center;
+	}
+	.header-nav>ul>li>ul>li>a{
+		padding: 0;
+	}
+
+	
+	
 	/*header-navbar*/
 	.header-navbar {
 		background: #4CCFC1;
+		/* background: red; */
+		border-bottom: 1px solid #4CCFC1;
+		box-shadow: 1px -1px 5px #32AC9D;
 		text-align: center;
-		height: 41px;
+		height: 47px;
 	}
-	.header-navbar ul {
+
+	.header-navbar>ul {
 		display: inline-block;
-		overflow: auto;
 	}
-	.header-navbar ul li {
+
+	.header-navbar>ul>li {
 		float: left;
 		display: inline;
+		position: relative;
 	}
-	.header-navbar ul li a {
+	.header-navbar>ul>li>a {
 		color: white;
 		font-size: 18px;
 		font-weight: bolder;
 	}
-    .b-footer{
+	.header-navbar>ul>li>ul{
+		clear:both;
+		position: absolute;
+		/* left:-100px; */
+		top:50px;
+		opacity:0;
+		transition:all .5s linear;
+	}
+	.header-navbar>ul>li:hover>ul{
+		top:47px;
+		opacity:1;
+	}
+	.header-navbar>ul>li>ul>li{
+		display:block;
+		/* background:#40C4B2; */
+		width:100px;
+		text-align: center;
+		
+	}
+	.header-navbar>ul>li>ul>li>a{
+		padding: 0;
+		color: black;
+	}
+	.b-footer{
 		display: flex;
 		flex-flow: nowrap wrap;
 		justify-content: space-around;
@@ -110,7 +188,7 @@
 	.footer h3{
 		color: white;
 	}
-	.footer ul li a{
+	.footer>ul>li>a{
 		padding: 5px 0;
 		font-size: 18px;	
 	}
@@ -121,6 +199,8 @@
 		font-size: 20px;
 		color: white;
 	}
+
+
     .main{
         display: flex;
         flex-flow: row nowrap;
@@ -300,42 +380,86 @@
     </style>
 </head>
 <body>
-    	<!-- 顶部导航 -->
+	<!-- 顶部导航 -->
 	<div class="header-nav">
-		<ul>
-			<li><a href="login.html">登录</a></li>
-			<li><a href="reg.html">注册</a></li>
-			<li><a href="">购物车</a></li>
-			<li><a href="">我的订单</a></li>
-			<li><a href="">关于我们</a></li>
-		</ul>
-		<div class="clear"></div>
-	</div>
+			<ul>
+				<li><a href="login.html">登录</a></li>
+				<li><a href="reg.html">注册</a></li>
+				<li><a href="">购物车</a></li>
+				<li><a href="">我的订单</a>
+					<ul>
+							<li><a href="">帮助中心</a></li>
+							<li>在线客服</li>
+							<li>电话客服</li>
+							<li>金融咨询</li>
+					</ul>
+				</li>
+				<li>
+					<a href="">关于我们</a>
+					<ul>
+							<li><a href="">帮助中心</a></li>
+							<li>在线客服</li>
+							<li>电话客服</li>
+							<li>金融咨询</li>
+					</ul>
+				</li>
+			</ul>
+			<div class="clear"></div>
+		</div>
 	<!-- 搜索栏 -->
 	<div class="header-search">
-		<div class="h-logo">
-			<img src="logo.png" alt="">
-		</div>
-		<div class="h-search">
-			<input type="text">
-			<input type="submit" value="">
-		</div>
-		<div class="h-icon">
-			<img src="images/cart.png" alt="">
-		</div>
-		<div class="clear"></div>
+			<div class="h-logo">
+				<a href=""><img src="logo.png" alt=""></a>
+			</div>
+			<div class="h-search">
+				<input type="text">
+				<input type="submit" value="">
+			</div>
+			<div class="h-icon">
+				<img src="images/cart.png" alt="">
+			</div>
+			<div class="clear"></div>
 	</div>
+		
 	<!-- 导航栏 -->
 	<div class="header-navbar">
-		<ul>
-			<li><a href="#">HOME</a></li>
-			<li><a href="#">NIKE</a></li>
-			<li><a href="#">Adidas</a></li>
-			<li><a href="#">VANS</a></li>
-			<li><a href="#">NEW BALANCE</a></li>
-		</ul>
-		<div class="clear"></div>
-    </div>
+			<ul>
+				<li><a href="index2.html">HOME</a></li>
+				<li>
+					<a href="#">NIKE</a>
+					<ul>
+						<li><a href="">111</a></li>
+						<li>在线客服</li>
+						<li>电话客服</li>
+						<li>金融咨询</li>
+					</ul>
+				</li>
+				<li><a href="#">Adidas</a>
+					<ul>
+						<li><a href="">111</a></li>
+						<li>在线客服</li>
+						<li>电话客服</li>
+						<li>金融咨询</li>
+					</ul>
+				</li>
+				<li><a href="#">VANS</a>
+					<ul>
+						<li><a href="">111</a></li>
+						<li>在线客服</li>
+						<li>电话客服</li>
+						<li>金融咨询</li>
+					</ul>
+				</li>
+				<li><a href="#">NEW BALANCE</a>
+					<ul>
+						<li><a href="">111</a></li>
+						<li>在线客服</li>
+						<li>电话客服</li>
+						<li>金融咨询</li>
+					</ul>
+				</li>
+			</ul>
+	</div>
     <!-- 主体内容 -->
     <div class="main">
       	<!-- left -->
