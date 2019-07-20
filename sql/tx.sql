@@ -16,4 +16,13 @@ CREATE TABLE tx_user(
   user_name  VARCHAR(16),
   gender   VARCHAR(2)
 );
+CREATE TABLE tx_pro(
+  lid		INT         PRIMARY KEY AUTO_INCREMENT,
+  product_id	INT,
+  title		VARCHAR(32),
+  subtitle	VARCHAR(128),
+  price		DECIMAL(10,2),
+  spec		VARCHAR(32),
+  size		VARCHAR(32)
+);
 

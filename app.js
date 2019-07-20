@@ -3,9 +3,13 @@ const express=require('express');
 const userRouter=require('./routes/user.js');
 //引入body-parser中间件
 const bodyParser=require('body-parser');
-var app=express();
-app.listen(8081);
+// const cors=require("cors");
 
+var app=express();
+var server = app.listen(3000);
+// app.use(cors({
+//     origin:"http://127.0.0.1:5500"
+//   }));
 app.use(express.static('public'));
 //使用body-parser中间件
 app.use( bodyParser.urlencoded({
@@ -13,7 +17,7 @@ app.use( bodyParser.urlencoded({
 }) );
 
 
-app.use( '/user',userRouter );
+app.use('/user',userRouter );
 
 
 
