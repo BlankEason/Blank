@@ -140,6 +140,7 @@ ul>li>a{
     /* left:-100px; */
     top:50px;
     opacity:0;
+    z-index: 2;
     transition:all .5s linear;
 }
 .header-navbar>ul>li:hover>ul{

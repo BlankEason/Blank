@@ -1,0 +1,64 @@
+.main{
+    width: 90%;
+    margin: 0 auto;
+}
+.title{
+    padding: 20px 100px;
+}
+.title>.ul-nav>li{
+    float: left;
+    /* background: pink; */
+}
+.title>.ul-nav>li>a{
+    display: block;
+    padding: 10px 20px;
+    color: black;
+}
+.title>.ul-nav>li:hover{
+    background: pink;
+}
+
+
+.pro{
+    position: relative;
+    margin: 0 auto;
+}
+.pro>div{
+    width: 90%;
+    margin: 0 auto;
+}
+.pro>div>.pro-detail{
+    position: relative;
+    width: 330px;
+    height: 360px;
+    margin: 20px 30px;
+    float: left;    
+}
+.pro>div>.pro-detail>a>img{
+    transition: all .5s linear;  
+}
+.pro>div>.pro-detail:hover>a>img{
+    transform: scale(1.1);
+}
+
+
+.pro-detail>span{
+    display: block;
+    position: absolute;
+    opacity: 0;
+    transition: all .1s linear;  
+}
+.pro-detail>span>a{
+    font-size: 18px;
+}
+.pro-detail:hover>span{
+    bottom: 20px;
+    opacity: 1;
+    transform: scale(1.1);
+    background: #4CCFC1;
+    /* background: blue; */
+}
+
+
+
+.clear{clear: both;}
