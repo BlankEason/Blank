@@ -1,0 +1,140 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>使用Selector API实现购物车客户端计算</title>
+<meta charset="utf-8" />
+<style>
+	table{width:600px; text-align:center;
+		border-collapse:collapse;
+	}
+	td,th{border:1px solid black}
+	td[colspan="3"]{text-align:right;}
+	/*让tbody中每行最后一个td背景变为粉色*/
+	tbody td:last-child{
+		background:pink;
+	}
+	/*让tfoot中最后一个td背景变为黄色*/
+	tfoot td:last-child{
+		background:yellow;
+	}
+</style>
+
+</head>
+<body>
+<table class="data">
+<thead>
+	<tr>
+		<th>商品名称</th>
+		<th>单价</th>
+		<th>数量</th>
+		<th>小计</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>iPhone6</td>
+		<td>¥4488.00</td>
+		<td>
+			<button>-</button>
+			<span>1</span>
+			<button>+</button>
+		</td>
+		<td>¥4488.00</td>
+	</tr>
+	<tr>
+		<td>iPhone6 plus</td>
+		<td>¥5288.00</td>
+		<td>
+			<button>-</button>
+			<span>1</span>
+			<button>+</button>
+		</td>
+		<td>¥5288.00</td>
+	</tr>
+	<tr>
+		<td>iPad Air 2</td>
+		<td>¥4288.00</td>
+		<td>
+			<button>-</button>
+			<span>1</span>
+			<button>+</button>
+		</td>
+		<td>¥4288.00</td>
+	</tr>
+</tbody>
+<tfoot>
+	<tr>
+		<td colspan="3">Total: </td>
+		<td>¥14064.00</td>
+	</tr>
+</tfoot>
+</table>
+<script>
+//找到id为data的整个table
+var table=
+	document.getElementsByClassName("data")[0];
+	table.onclick=function(e){
+	//获得当前正在单击的按钮，保存在局部变量btn中，反复使用
+	var btn=e.target;
+	if(btn.nodeName=="BUTTON"){
+		//btn.style.backgroundColor="red";
+		/*点按钮，让旁边的数量变化*/
+		//找到当前按钮旁边的span
+		var span=
+		//   先找爹td 再找爹下第2个孩子span
+			btn.parentNode.children[1];
+						//td        //span
+		//获得span的内容,强转为整数
+		var n=parseInt(span.innerHTML);
+		if(btn.innerHTML=="+"){//如果点的是+
+			n++;//就+1
+		}else if(n>1){//否则 如果点的是-，且内容>1
+			n--;//才能-1
+		}
+		//将修改后的内容再放回span的内容中
+		span.innerHTML=n;
+
+		/*小计变化*/
+		//先获得tr: 当前按钮btn的爹的爹
+		var tr=btn.parentNode.parentNode;
+		//获得tr下第二个td中的内容单价，去掉开头的人民币符号，再转为数字
+		var price=parseFloat(
+			tr.children[1].innerHTML.slice(1)
+		);
+		//计算小计: 单价*数量n
+		var subtotal=price*n;
+		//将小计放到当前行tr下最后一个td中，并格式化为货币的格式
+		tr.children[3].innerHTML=`¥${subtotal.toFixed(2)}`;
+
+		/*计算总计*/
+		//在table下查找tbody下每行最后一个td
+		var tds=table.querySelectorAll(
+			"tbody td:last-chlid"
+		);
+		console.log(tds);
+		//在table下找tfoot下最后一个td
+		var tfoot_td=table.querySelector(
+			"tfoot td:last-child"
+		);
+		console.log(tfoot_td);
+		//先定义变量total=0,准备接汇总的总价
+		var total=0;
+		//遍历tds中每个td
+		for(var td of tds){
+			//每遍历一个td，就取出当前td的内容，去掉开头的人民币，转为浮点数，累加到total上
+			total+=parseFloat(
+				td.innerHTML.slice(1)
+			);
+		}
+		//将total赋值给tfoot_td的内容
+		tfoot_td.innerHTML=`¥${total.toFixed(2)}`
+	}
+}
+//console.log("循环结束!")
+//循环已经结束了!
+//唯一的变量只能指向最后一个元素
+
+//今后单击按钮时，才执行某个按钮.onclick
+</script>
+</body>
+</html>

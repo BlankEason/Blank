@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table{width:600px; text-align:center;
+            border-collapse:collapse;
+        }
+        td,th{border:1px solid black}
+        td[colspan="3"]{text-align:right;}
+        /*让tbody中每行最后一个td背景变为粉色*/
+        tbody td:last-child{
+            background:pink;
+        }
+        /*让tfoot中最后一个td背景变为黄色*/
+        tfoot td:last-child{
+            background:yellow;
+        }
+    </style>
+</head>
+<body>
+<table class="data">
+    <thead>
+        <tr>
+            <th>商品名称</th>
+            <th>单价</th>
+            <th>数量</th>
+            <th>小计</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>iPhone6</td>
+            <td>¥4488.00</td>
+            <td>
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+            </td>
+            <td>¥4488.00</td>
+        </tr>
+        <tr>
+            <td>iPhone6 plus</td>
+            <td>¥5288.00</td>
+            <td>
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+            </td>
+            <td>¥5288.00</td>
+        </tr>
+        <tr>
+            <td>iPad Air 2</td>
+            <td>¥4288.00</td>
+            <td>
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+            </td>
+            <td>¥4288.00</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">Total: </td>
+            <td>¥14064.00</td>
+        </tr>
+    </tfoot>
+</table>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+    // var $table=$(".data");
+    // // console.log($table);
+    // $table.click(function(e){
+    //     var $btn=$(e.target);
+    //     if($btn.is("BUTTON")){
+    //         var $span=$("span");
+    //         var n=parseInt($span.html());
+    //         console.log(n);
+    //         if($btn.html()=="+"){
+    //             n++;
+    //         }else if(n>1){
+    //             n--;
+    //         }
+    //         $span.html(n);
+    //     }
+    // })
+    var $btn=$("BUTTON");
+    console.log($btn);
+    $btn.click(function(e){
+        e.target=$(this);
+        var $span=$("span");
+        var n=parseInt($span.html()); 
+        if(e.target.html()=="+"){
+            n++;
+        }else if(n>1){
+            n--;
+        }
+        $span.html(n);
+     })
+</script>
+</body>
+</html>
