@@ -117,7 +117,7 @@ ul>li>a{
     background: #4CCFC1;
     text-align: center;
     height: 41px;
-
+    z-index: 1;
 }
 
 .header-navbar>ul {
@@ -157,4 +157,10 @@ ul>li>a{
 .header-navbar>ul>li>ul>li>a{
     padding: 0;
     color: black;
+}
+.hn{
+    position: relative;
+}
+.clear{
+    clear: both;
 }
