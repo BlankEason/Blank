@@ -75,9 +75,9 @@ ul>li>a{
     /* background: #4CCFC1 */
     /* border: 2px solid #4CCFC1 */
 }
+
 .car-head{
-    
-    background: #4CCFC1
+    background: #4CCFC1;
 }
 .car-head>ul>li{
     float: left;
@@ -94,14 +94,13 @@ ul>li>a{
     width: 12%;
 }
 
-
+/* 商品 */
 .car-body>ul>li.list-item>div:first-child{
     width: 52%
 }
 .car-body>ul>li.list-item>div:not(first-child){
     width: 12%
 }
-
 .car>.car-body{
     border: 1px solid #4CCFC1;
 }
@@ -119,8 +118,29 @@ ul>li>a{
     height: 190px;
     padding: 40px 0;
 }
+.car-body>ul>li.list-item>.num{
+    display: flex;
+    justify-content: space-around;
+}
+.car-body>ul>li.list-item>.num>div.add{
+    
+    position: relative;
+    left: -20px;
+}
+.car-body>ul>li.list-item>.num>div.sub{
+    
+    position: relative;
+    right: -20px;
+}
+.car-body>ul>li.list-item>.num>div>a{
+    font-size: 28px;
+    color: #4CCFC1;
+}
+.car-body>ul>li.list-item>.del>a{
+    color: #4CCFC1;
+}
 .car-body>ul>li.list-item>.details>div{
-    float: left;
+    display: flex;
 }
 .car-body>ul>li.list-item>.details>div>input,
 .car-body>ul>li.list-item>.num>input,
@@ -129,18 +149,38 @@ ul>li>a{
     height: 30px;
 }
 
+/* 全选及其结账 */
 .car>.car-footer{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    height: 54px;
-    border: 1px solid #4CCFC1;
+    height: 68px;
+    margin-top: 20px;
+    /* border: 1px solid #4CCFC1; */
 }
-.car>.car-footer>.total>div,
-.car>.car-footer>.check>div{
-    float: left;
+.car>.car-footer>.total,
+.car>.car-footer>.check{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .car>.car-footer>div{
     margin: 0 15px;
 }
+.car>.car-footer>.check>div{
+    margin-right: 10px;
+}
+.car>.car-footer>.total>div{
+    margin-right: 20px;
+}
+.car>.car-footer>.total>div>span{
+    color: red;
+    font-weight: bolder;
+    font-size: 26px;
+}
+.car>.car-footer>.total>div>button{
+    width: 150px;
+    font-size: 26px;
+}
+
